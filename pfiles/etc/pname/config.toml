@@ -1,0 +1,8 @@
+organization = "AX"
+lang = "english"
+[database]
+host = "localhost"
+port = 3306
+name = "axdb"
+user = "root"
+password = "pass"

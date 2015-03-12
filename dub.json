@@ -1,0 +1,30 @@
+{
+	"name" : "axt-d-base-application",
+	"description" : "A minimal D bundle.",
+	"homepage": "http://www.axlu.net",
+	"license": "GPL-2.0",
+	"copyright": "Copyright © 2015, ax",
+	"authors": ["ax"],
+	"targetType": "executable",
+	"targetPath": "bin",
+	"dependencies" : {
+		"hibernated": ">=0.2.11",
+		"toml-d": ">=0.3.0",
+		"vibe-d": "~>0.7.21",
+		"ax-static-d": {
+				"version": "0.0.1",
+				"path": "../ax-static-d/"
+			}
+	},
+	"configurations": [
+		{
+			"name": "MySQL",
+			"versions": ["USE_MYSQL"],
+			"subConfigurations":
+			{
+				"hibernated": "MySQL"
+			}
+		}
+	],
+	"versions": ["VibeCustomMain", "USE_MYSQL"]
+}
